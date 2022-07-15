@@ -4,30 +4,35 @@
     <div class="row">
         <div class="col">
             <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                <div class="row g-3">
-                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <label for="" class="form-label">Course title :</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <label for="" class="form-label">Duration :</label>
-                        <input type="time" class="form-control">
-                    </div>
-                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                        <label for="" class="form-label">Description :</label>
-                        <textarea name="" id="" cols="30" rows="5" class="form-control"></textarea>
-                    </div>
-                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <label for="" class="form-label">Venue :</label>
-                        <input type="" class="form-control">
-                    </div>
-                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <label for="" class="form-label">Date :</label>
-                        <input type="date" name="" id="" class="form-control">
-                    </div>
-                    <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                        <button class="btn btn-primary">Register</button>
-                    </div>
+                <div class="card-body">
+                    <form #addcourse="ngForm" (ngSubmit)="AddCourse()">
+                        <div class="form-group">
+                            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                <label for="" class="form-label">Course title :</label>
+                                <input type="text" [(ngModel)]="course.courseTitle" name="title" class="form-control">
+                            </div>
+                            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                <label for="" class="form-label">Duration :</label>
+                                <input type="text" [(ngModel)]="course.courseDuration" name="duration" class="form-control">
+                            </div>
+                            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                <label for="" class="form-label">Description :</label>
+                                <textarea name="description" [(ngModel)]="course.courseDescription" id="" cols="30" rows="5" class="form-control"></textarea>
+                            </div>
+                            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                <label for="" class="form-label">Venue :</label>
+                                <input type="text" [(ngModel)]="course.courseVenue" name="venue" class="form-control">
+                            </div>
+                            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                <label for="" class="form-label">Date :</label>
+                                <input type="date" [(ngModel)]="course.courseDate" name="date" id="" class="form-control">
+                            </div>
+                            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                <button class="btn btn-primary">Register</button>
+                            </div>
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </div>
