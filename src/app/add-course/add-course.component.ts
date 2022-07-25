@@ -21,9 +21,9 @@ export class AddCourseComponent implements OnInit {
   AddCourse(){
     this.api.addCourse(this.course).subscribe(
       (data)=>{
-        alert("success");
+       
       })
-    
+     alert("success");
   }
 
 }
